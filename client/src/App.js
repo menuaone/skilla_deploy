@@ -33,9 +33,10 @@ function App() {
         try {
             setIsLoading(true);
             const { data } = await axios.get(
-                `/contact_list?sortBy=${sortBy}&order=${order}`
+                `/contacts?sortBy=${sortBy}&order=${order}`
             );
 
+            console.log('#### data:', data);
             setIsLoading(false);
             return data;
         } catch (error) {
