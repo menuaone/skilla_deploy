@@ -31,5 +31,5 @@
             "last 1 safari version"
         ]
     },
-    "proxy": "https://skilla-deploy-srvr.vercel.app/"
+    "proxy": "skilla-deploy-srvr.vercel.app/"
 }
