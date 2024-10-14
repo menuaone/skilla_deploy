@@ -51,5 +51,3 @@ async function getDataFromApi() {
 
     return data.results;
 }
-
-getDataFromApi();
