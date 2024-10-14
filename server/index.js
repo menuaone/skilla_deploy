@@ -8,6 +8,20 @@ app.listen(port, () => {
     console.log(`Server is runnning on port ${port}`);
 });
 
+async function getDataFromApi() {
+    const response = await fetch(URL, {
+        method: 'POST',
+        headers: {
+            'Authorization': 'Bearer testtoken',
+        },
+    });
+
+    const data = await response.json();
+
+    return data.results;
+}
+
+
 app.get('/contact_list', async (req, res) => {
     try {
         const { order = 'asc', sortBy = 'dayTime' } = req.query;
@@ -39,15 +53,3 @@ app.get('/contact_list', async (req, res) => {
     }
 });
 
-async function getDataFromApi() {
-    const response = await fetch(URL, {
-        method: 'POST',
-        headers: {
-            'Authorization': 'Bearer testtoken',
-        },
-    });
-
-    const data = await response.json();
-
-    return data.results;
-}
