@@ -1,0 +1,37 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 16px;
+}
+
+@media screen and (max-width: 1199px) {
+    .wrapper {
+        max-width: 50rem;
+    }
+}
+
+.dropdownMenu {
+    display: flex;
+    gap: 16px;
+}
+
+.resetFilter {
+    display: none;
+}
+
+.activeFilter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary-color);
+}
+
+.resetFilter:hover {
+    cursor: pointer;
+    color: var(--active-color);
+
+}
+

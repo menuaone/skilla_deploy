@@ -1,0 +1,151 @@
+.datePicker {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--text-secondary-color);
+}
+
+.pickerButton {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pickerButton:hover {
+    cursor: pointer;
+}
+
+.arrowBtn {
+    color: var(--active-color);
+}
+
+.calendar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pickerMenu {
+    position: absolute;
+
+    color: var(--text-secondary-color);
+    background-color: var(--white-color);
+
+    box-shadow: var(--shadow);
+
+    margin-top: 2.4rem;
+    top: 0;
+    right: 0;
+    border-radius: 8px;
+    z-index: 1000;
+    transform: translateY(-5%);
+}
+
+.pickerMenuItem {
+    width: 10rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.pickerMenuItem:hover {
+    background-color: var(--dropdown-hover);
+}
+
+.active {
+    color: var(--active-color);
+}
+
+.arrowLeft:hover * {
+    fill: var(--active-color);
+    stroke: var(--active-color);
+}
+
+.arrowRight:hover * {
+    fill: var(--active-color);
+    stroke: var(--active-color);
+}
+
+/* input */
+
+.inputHeader {
+    margin-top: 4px;
+    padding: 0rem 1rem;
+    color: var(--text-main-color);
+}
+
+.inputWrapper {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.inputWrapper input {
+    width: 80%;
+    padding: 1rem 0.2rem 1rem 1rem;
+    /* padding: 1rem; */
+    border: none;
+    font-size: 12px;
+
+    background-color: transparent;
+    color: var(--text-main-color);
+}
+
+input::placeholder {
+    color: var(--text-secondary-color);
+}
+
+.inputWrapper input:focus {
+    outline: none;
+}
+
+.calendarButton:hover {
+    cursor: pointer;
+}
+
+/* input calendar */
+
+.inputCalendar {
+    position: absolute;
+
+    padding: 10px;
+
+    right: 0;
+    z-index: 1;
+    background-color: var(--white-color);
+    box-shadow: var(--shadow);
+}
+
+.calendarHeader {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.calendarGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: var(--body-color);
+}
+
+.day:hover {
+    background-color: var(--dropdown-hover);
+}
+
+.selectedDay {
+    background-color: var(--active-color);
+    color: var(--white-color);
+}

@@ -1,0 +1,34 @@
+.veryBad{
+    color: #ea1a4f;
+}
+
+.bad {
+    display: inline-block;
+    padding: 6px 8px;
+    background-color: #fee9ef;
+    border: solid 1px #ea1a4f;
+    border-radius: 4px;
+    color: #ea1a4f;
+    font-size: 14px;
+    text-align: c;
+}
+
+.good {
+    display: inline-block;
+    padding: 6px 8px;
+    background-color: #D8E4FB;
+    border: solid 1px #B7C7E3;
+    border-radius: 4px;
+    color: #122945;
+    font-size: 14px;
+}
+
+.perfect {
+    display: inline-block;
+    padding: 6px 8px;
+    background-color: #dbf8ef;
+    border: solid 1px #3eb287;
+    border-radius: 4px;
+    color: #3eb287;
+    font-size: 14px;
+}

@@ -1,0 +1,123 @@
+.table {
+    width: 1440px;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: var(--white-color);
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+
+    color: var(--text-main-color);
+
+    z-index: 1;
+}
+
+@media screen and (max-width: 1199px) {
+    .table {
+        max-width: 50rem;
+    }
+}
+
+/* @media screen and (max-width: 768px) {
+    .table {
+        max-width: 500px;
+    }
+} */
+
+thead tr {
+    border-bottom: 1px solid var(--separator-color);
+}
+tbody tr {
+    border-bottom: 1px solid var(--separator-color);
+}
+
+tbody tr:last-child {
+    border: none;
+}
+
+tbody tr:hover {
+    background: var(--separator-color);
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+thead {
+    padding-top: 4px;
+}
+
+tfoot {
+    height: 52px;
+}
+
+th {
+    color: var(--table-header-text-color);
+    opacity: 87%;
+
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    height: 65px;
+}
+
+td {
+    font-size: 15px;
+    height: 65px;
+}
+
+/* columns */
+
+/* type */
+
+tr th:first-child {
+    padding-left: 40px;
+}
+
+tr td:first-child {
+    padding-left: 40px;
+    width: 85px;
+}
+
+/* time */
+tr th:nth-child(2) {
+    width: 100px;
+}
+
+tr th:nth-child(2):hover {
+    cursor: pointer;
+}
+
+/* person */
+tr th:nth-child(3) {
+    width: 110px;
+}
+
+/* call */
+tr th:nth-child(4) {
+    width: 320px;
+}
+
+/* company */
+tr th:nth-child(5) {
+    width: 214px;
+}
+
+tr td:nth-child(5) {
+    color: var(--text-secondary-color);
+}
+
+/* duration */
+tr th:last-child {
+    text-align: right;
+    padding-right: 19px;
+    min-width: 130px;
+}
+
+tr td:last-child {
+    text-align: right;
+    padding-right: 19px;
+}
+
+tr th:last-child:hover {
+    text-align: right;
+    padding-right: 19px;
+    cursor: pointer;
+}
