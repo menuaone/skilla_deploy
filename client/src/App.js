@@ -33,7 +33,7 @@ function App() {
         try {
             setIsLoading(true);
             const { data } = await axios.get(
-                `/contacts?sortBy=${sortBy}&order=${order}`
+                `https://skilla-deploy-srvr.vercel.app/contacts?sortBy=${sortBy}&order=${order}`
             );
 
             console.log('#### data:', data);
