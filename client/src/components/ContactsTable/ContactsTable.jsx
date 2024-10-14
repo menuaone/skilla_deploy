@@ -5,14 +5,7 @@ import CallStatus from '../CallStatus/CallStatus';
 import PersonAvatar from '../PersonAvatar/PersonAvatar';
 import Quality from '../Quality/Quality';
 
-
-const ContactsTable = ({
-    dataSource,
-    handleSortFromServer,
-    order,
-    sortBy,
-}) => {
-
+const ContactsTable = ({ dataSource, handleSortFromServer, order, sortBy }) => {
     const formatDurationTime = (eltime) => {
         return [Math.floor(eltime / 60), eltime % 60]
             .map((val) => ('0' + val).slice(-2))
@@ -59,12 +52,13 @@ const ContactsTable = ({
                                 />{' '}
                             </td>
                             <td>
-                                {new Date(el.date).toLocaleTimeString([], {
+                                {/*  вывод только времени */}
+                                {/* {new Date(el.date).toLocaleTimeString([], {
                                     hour: '2-digit',
                                     minute: '2-digit',
-                                })}
+                                })} */}
 
-                                {/* {el.date} */}
+                                {el.date}
                             </td>
                             <td>{<PersonAvatar personId={el.person_id} />}</td>
                             <td>

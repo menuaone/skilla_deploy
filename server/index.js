@@ -12,9 +12,9 @@ app.listen(port, () => {
     console.log(`Server is runnning on port ${port}`);
 });
 
-// app.get("/:universalURL", (req, res) => { 
-//     res.send("404 URL НЕ НАЙДЕН"); 
-//  });
+app.get("/", (req, res) => { 
+    res.send("Добро пожаловать на серверную часть приложения."); 
+ });
 
 app.get('/contacts', async (req, res) => {
     try {
