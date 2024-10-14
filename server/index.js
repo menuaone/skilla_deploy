@@ -1,8 +1,11 @@
 const express = require('express');
+const fetch = require('node-fetch');
 const app = express();
 const port = 5000;
 const URL =
     'https://api.skilla.ru/mango/getList?date_start=2024-9-10&date_end=2024-10-14&limit=200';
+const cors = require('cors');
+app.use(cors());
 
 app.listen(port, () => {
     console.log(`Server is runnning on port ${port}`);
@@ -15,12 +18,15 @@ async function getDataFromApi() {
             'Authorization': 'Bearer testtoken',
         },
     });
+    if (!response.ok) {
+        console.error('API error:', response.status, response.statusText);
+        throw new Error('Failed to fetch data from API');
+    }
 
     const data = await response.json();
 
     return data.results;
 }
-
 
 app.get('/contact_list', async (req, res) => {
     try {
@@ -46,10 +52,11 @@ app.get('/contact_list', async (req, res) => {
             }
         });
 
-        res.send(list);
+        if (!list || list.length === 0) {
+            res.send(list);
+        }
     } catch (error) {
         console.log('#### serverError:', error);
         res.status(500).send({ error: 'Internal Server Error' });
     }
 });
-

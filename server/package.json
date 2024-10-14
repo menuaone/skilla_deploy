@@ -1,13 +1,16 @@
 {
     "name": "server",
-    "description": "",
+    "description": "Node.js server for API requests",
     "main": "index.js",
     "scripts": {
-        "start": "nodemon index.js"
+        "start": "node index.js",
+        "dev": "nodemon index.js"
     },
     "dependencies": {
         "axios": "^1.7.7",
+        "cors": "^2.8.5",
         "express": "^4.21.1",
+        "node-fetch": "^3.3.2",
         "nodemon": "^3.1.7"
     }
 }
