@@ -1,5 +1,5 @@
 {
-    "name": "index",
+    "name": "server",
     "description": "",
     "main": "index.js",
     "scripts": {
