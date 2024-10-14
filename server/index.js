@@ -63,3 +63,5 @@ async function getDataFromApi() {
 }
 
 // getDataFromApi();
+
+module.exports = app;
